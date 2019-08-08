@@ -20,10 +20,12 @@ const server = http.createServer((req, res) => {
     } else if (method == 'POST') {
         let postData = '';
         req.on('data', chunk => {
+            console.log(chunk.toString());
             postData += chunk.toString();
         })
         console.log('POST');
         req.on('end', () => {
+            console.log('end');
             resData.postData = postData;
             res.end(JSON.stringify(resData));
 
