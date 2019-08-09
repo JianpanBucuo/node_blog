@@ -45,3 +45,9 @@ showdatabases
 jinjian94530!@
 
 SET SQL_SAFE_UPDATES = 0; 可以更新
+
+
+总结
+如何建库， 如何建表
+建表时常用的数据类型 int bigint varchar longtext
+sql 增删改查
