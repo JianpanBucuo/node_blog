@@ -14,9 +14,15 @@ const handleUserRouter = (req, res) => {
                 return new ErrorModel('登录失败')
             }
         })
-        if(result) {
+    }
+    //登录测试
+    if (method == 'GET' && req.path == '/api/user/login-test') {
+        if (req.cookie.username) {
+            // return new SuccessModel(result, '登录成功');
+            return Promise.resolve(new SuccessModel( '登录成功'))
         } else {
-            return new ErrorModel('登录失败')
+            return Promise.resolve(new ErrorModel('登录失败'))            
+            // return new ErrorModel('登录失败')
         }
     }
 }

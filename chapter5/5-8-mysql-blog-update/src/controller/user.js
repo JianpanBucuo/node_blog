@@ -1,4 +1,4 @@
-const loginCheck = (username, password) => {
+const login = (username, password) => {
     if (username == 'zhangsan' && password == '123') {
         return true;
     } else {
@@ -7,5 +7,5 @@ const loginCheck = (username, password) => {
 }
 
 module.exports = {
-    loginCheck
+    login
 }
