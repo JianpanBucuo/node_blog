@@ -42,24 +42,28 @@ const handleBlogRouter = (req, res) => {
         const blogData = req.body;
         const id = blogData.id;
         const result = updateBlog(id, blogData);
-
-        if(result) {
-            return new SuccessModel(result, '更新博客成功');
-        } else {
-            return new ErrorModel('更新博客失败')
-        }
+        return result.then(val => {
+            if (val) {
+                return new SuccessModel(blogData,'更新博客成功');  
+            } else {
+                return new ErrorModel(blogData,'更新博客失败');  
+            }
+        }) 
     }
 
     //删除一篇博客
     if (method == 'POST' && req.path == '/api/blog/delete') {
         const blogData = req.body;
         const id = blogData.id;
-        const result = delBlog(id);
-        if(result) {
-            return new SuccessModel(result, '删除博客成功');
-        } else {
-            return new ErrorModel('删除博客失败')
-        }
+        blogData.author = 'gre' //待开发 开发登录后使用真数据    
+        const result = delBlog(id,blogData.author);
+        return result.then((val) => {
+            if (val) {
+                return new SuccessModel(val, '删除博客成功');
+            } else {
+                return new ErrorModel('删除博客失败')
+            }
+        })
     }
 }
 

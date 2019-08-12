@@ -54,20 +54,15 @@ const serverHandle =  (req, res) => {
             return;        
         }
  
-        // const blogData = handleBlogRouter(req, res);
-        // if (blogData) {
-        //     res.end(
-        //         JSON.stringify(blogData)
-        //     );
-        //     return;
-        // }
-
+ 
         //处理 user路由
-        const userData = handleUserRouter(req, res);
-        if (userData) {
-            res.end(
-                JSON.stringify(userData)
-            )
+        const userResult = handleUserRouter(req, res);
+        if (userResult) {
+            userResult.then(userData => {
+                res.end(
+                    JSON.stringify(userData)
+                );
+            })
             return;
         }
         //未命中路由，返回404
