@@ -22,20 +22,14 @@ const handleBlogRouter = (req, res) => {
     }
     if (method == 'GET' && req.path == '/api/blog/detail') {
         const id = req.query.id || ''; //博客id
-        const data = getDetail(id);
-        // return new SuccessModel(detailData, '');
-        return data.then(detailData => {
-            return new SuccessModel(detailData[0],'');           
-        })
+        const detailData = getDetail(id);
+        return new SuccessModel(detailData, '');
     }   
     //新建一篇博客
     if (method == 'POST' && req.path == '/api/blog/new') {
-        req.body.author = 'zhangsan' //待开发 开发登录后使用真数据
         const blogData = req.body;
         const data = newBlog(blogData);
-        return  data.then(blogData => {
-            return new SuccessModel(blogData,'');  
-        })
+        return new SuccessModel(data, '');
     }
     //更新一篇博客
     if (method == 'POST' && req.path == '/api/blog/update') {

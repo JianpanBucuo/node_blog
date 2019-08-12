@@ -43,7 +43,7 @@ const serverHandle =  (req, res) => {
     }).then(() => {
         //处理 blog路由
         const blogResult =  handleBlogRouter(req, res);
-        console.log(Boolean('blogResult',blogResult));
+        console.log(Boolean(blogResult));
         if (blogResult) {
             blogResult.then(blogData => {
                  
