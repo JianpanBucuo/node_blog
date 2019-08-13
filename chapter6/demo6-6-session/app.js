@@ -62,6 +62,8 @@ const serverHandle =  (req, res) => {
         req.cookie[key] = value;
     });
     let needSetCookie = false;
+
+
     let userId = req.cookie.userid;
     if(userId) {
         if(!SESSION_DATA[userId]) {
@@ -73,7 +75,7 @@ const serverHandle =  (req, res) => {
         console.log(userId);
         SESSION_DATA[userId] = {};
     }
-    // 两个对象指针指向相同
+    // 两个对象指针指向相同的堆内存
     req.session = SESSION_DATA[userId]
 
     // 处理postData
