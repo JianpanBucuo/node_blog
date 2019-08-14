@@ -28,7 +28,6 @@ const handleUserRouter = (req, res) => {
     }
     //登录测试
     if (method == 'GET' && req.path == '/api/user/login-test') {
-         
         if (req.session.username) {
             return Promise.resolve(new SuccessModel( req.session,'登录成功'))
         } else {

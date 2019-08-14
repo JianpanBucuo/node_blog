@@ -11,8 +11,7 @@ const getCookieExpires = () => {
 }    
 const SESSION_DATA = {
 
-} 
- 
+}  
 const getPostData = (req) => {
     const promise = new Promise((resolve, reject) => {
         if (req.method !== 'POST') {
@@ -96,7 +95,6 @@ const serverHandle =  (req, res) => {
                 }) 
             return;        
         }
- 
  
         //处理 user路由
         const userResult = handleUserRouter(req, res);
