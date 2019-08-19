@@ -31,5 +31,5 @@ rl.on('line', lineData => {
 })
 //监听读取完成
 rl.on('close',() => {
-    console.log('chrome 占比：',+ chromeNum / sum);
+    console.log('chrome 占比：'+ chromeNum / sum);
 })
