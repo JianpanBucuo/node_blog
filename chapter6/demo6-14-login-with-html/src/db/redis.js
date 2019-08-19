@@ -22,6 +22,7 @@ function get (key) {
                 reject(err);
                 return;
             }
+
             if (val == null) {
                 resolve(null);
                 return;
@@ -44,4 +45,4 @@ module.exports = {
     get,
     set
 }
-            // redisClient.quit(); 保持连接
+// redisClient.quit(); 保持连接
