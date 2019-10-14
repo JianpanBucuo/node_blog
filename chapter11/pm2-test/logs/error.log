@@ -1,0 +1,12 @@
+2019-10-14 10:26:47: Error: 进程崩溃
+2019-10-14 10:26:47:     at Server.http.createServer (E:\OWN\eg\node\chapter11\pm2-test\index.js:6:15)
+2019-10-14 10:26:47:     at Server.emit (events.js:182:13)
+2019-10-14 10:26:47:     at Server.<anonymous> (E:\OWN\eg\node\chapter11\pm2-test\node_modules\@pm2\io\build\main\metrics\httpMetrics.js:166:33)
+2019-10-14 10:26:47:     at parserOnIncoming (_http_server.js:672:12)
+2019-10-14 10:26:47:     at HTTPParser.parserOnHeadersComplete (_http_common.js:109:17)
+2019-10-14 10:26:48: Error: 进程崩溃
+2019-10-14 10:26:48:     at Server.http.createServer (E:\OWN\eg\node\chapter11\pm2-test\index.js:6:15)
+2019-10-14 10:26:48:     at Server.emit (events.js:182:13)
+2019-10-14 10:26:48:     at Server.<anonymous> (E:\OWN\eg\node\chapter11\pm2-test\node_modules\@pm2\io\build\main\metrics\httpMetrics.js:166:33)
+2019-10-14 10:26:48:     at parserOnIncoming (_http_server.js:672:12)
+2019-10-14 10:26:48:     at HTTPParser.parserOnHeadersComplete (_http_common.js:109:17)
